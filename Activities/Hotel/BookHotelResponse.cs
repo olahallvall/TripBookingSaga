@@ -2,6 +2,6 @@
 {
     public class BookHotelResponse
     {
-        public int BookingNumber { get; set; }
+        public int HotelBookingId { get; set; }
     }
 }

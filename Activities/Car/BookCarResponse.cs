@@ -2,6 +2,6 @@
 {
     public class BookCarResponse
     {
-        public int BookingNumber { get; set; }
+        public int CarBookingId { get; set; }
     }
 }

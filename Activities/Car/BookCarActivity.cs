@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
+using TripBookingSaga.Activities.Hotel;
 
 namespace TripBookingSaga.Activities.Car
 {
@@ -13,11 +14,17 @@ namespace TripBookingSaga.Activities.Car
         }
 
         [Function(nameof(BookCar))]
-        public static string BookCar([ActivityTrigger] string name, FunctionContext executionContext)
+        public async Task<BookCarResponse> BookCar([ActivityTrigger] BookCarRequest bookCarRequest, FunctionContext executionContext)
         {
             ILogger logger = executionContext.GetLogger("BookCarActivity");
-            logger.LogInformation("Booked hotel {name}.", name);
-            return $"Booked hotel {name}!";
+            logger.LogInformation("Trying to book car for passportnumber {PassportNumber}.", bookCarRequest.PassportNumber);
+
+            var response = new BookCarResponse();
+            response.CarBookingId = 222;
+
+            await Task.Delay(1000);
+
+            return response;
         }
     }
 }

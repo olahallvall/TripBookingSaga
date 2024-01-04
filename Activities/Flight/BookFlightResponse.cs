@@ -2,6 +2,6 @@
 {
     public class BookFlightResponse
     {
-        public int BookingNumber { get; set; }
+        public int FlightBookingId { get; set; }
     }
 }

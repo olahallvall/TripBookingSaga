@@ -2,6 +2,6 @@
 {
     public class BookFlightRequest
     {
-        public string PassPortNumber { get; set; }
+        public string? PassportNumber { get; set; }
     }
 }

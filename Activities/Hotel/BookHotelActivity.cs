@@ -16,10 +16,10 @@ namespace TripBookingSaga.Activities.Hotel
         public async Task<BookHotelResponse> BookHotel([ActivityTrigger] BookHotelRequest bookHotelRequest, FunctionContext executionContext)
         {
             ILogger logger = executionContext.GetLogger("BookHotelActivity");
-            logger.LogInformation("Booked hotel for passportnumber {PassPortNumber}.", bookHotelRequest.PassPortNumber);
+            logger.LogInformation("Trying to book hotel for passportnumber {PassportNumber}.", bookHotelRequest.PassportNumber);
 
             var response = new BookHotelResponse();
-            response.BookingNumber = 222;
+            response.HotelBookingId = 111;
 
             await Task.Delay(1000);
 
