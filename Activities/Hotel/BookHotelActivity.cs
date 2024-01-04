@@ -1,8 +1,7 @@
 ﻿using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using TripBookingApp.TripBooking.Activities.Hotel;
 
-namespace FunctionApp1.TripBooking.Activities.Hotel
+namespace TripBookingSaga.Activities.Hotel
 {
     public class BookHotelActivity
     {

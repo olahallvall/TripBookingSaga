@@ -4,7 +4,7 @@ using Microsoft.DurableTask;
 using Microsoft.DurableTask.Client;
 using Microsoft.Extensions.Logging;
 
-namespace FunctionApp1.TripBooking.Triggers
+namespace TripBookingSaga.Triggers
 {
     public static class HttpStartTrigger
     {

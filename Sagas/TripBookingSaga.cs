@@ -2,10 +2,9 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.DurableTask;
 using Microsoft.Extensions.Logging;
 
-using FunctionApp1.TripBooking.Activities.Hotel;
-using TripBookingApp.TripBooking.Activities.Hotel;
+using TripBookingSaga.Activities.Hotel;
 
-namespace FunctionApp1.TripBooking.Sagas
+namespace TripBookingSaga.Sagas
 {
     public class TripBookingSaga
     {
@@ -18,7 +17,7 @@ namespace FunctionApp1.TripBooking.Sagas
             // Book the hotel using a person passport number
             var bookHotelRequest = new BookHotelRequest { PassPortNumber = "12212-A2" };
             var bookHotelResponse = await context.CallActivityAsync<BookHotelResponse>(nameof(BookHotelActivity.BookHotel), bookHotelRequest);
-         
+
 
 
         }

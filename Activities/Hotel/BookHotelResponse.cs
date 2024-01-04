@@ -1,4 +1,4 @@
-﻿namespace TripBookingApp.TripBooking.Activities.Hotel
+﻿namespace TripBookingSaga.Activities.Hotel
 {
     public class BookHotelResponse
     {
