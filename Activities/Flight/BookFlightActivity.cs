@@ -24,6 +24,8 @@ namespace TripBookingSaga.Activities.Flight
 
             await Task.Delay(1000);
 
+            throw new Exception("No flight available");
+
             return response;
         }
     }

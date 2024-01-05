@@ -24,6 +24,8 @@ namespace TripBookingSaga.Activities.Car
 
             await Task.Delay(1000);
 
+            //throw new Exception("No cars available"); 
+
             return response;
         }
     }
