@@ -22,6 +22,8 @@ namespace TripBookingSaga.Activities.Car
             
             await Task.Delay(1000);
 
+            // throw new Exception("Can't cancel the car. The vendor returns an exception.");
+
             return response;
         }
     }

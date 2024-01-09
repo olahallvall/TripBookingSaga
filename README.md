@@ -6,9 +6,20 @@ In the example hotel, car and flight booking might be done by different remote s
 
 ![Saga example](Docs/example-use-case.png)
 
-# Get started
-
-You need
-
+# You need
 * Visual Studio 2022 or later
 * Azure Functions Core Tools (Azure Functions Core Tools lets you develop and test your functions on your local computer)
+* Postman or equivalent. 
+
+# Inspiration
+* Distributed Sagas - https://www.youtube.com/watch?v=1H6tounpnG8
+* Balancing Choreography and Orchestration - https://www.youtube.com/watch?v=zt9DFMkjkEA
+
+# Get started
+* Run the Visual Studio solution (TripBookingSaga.sln) and hit F5 
+* Wait for Azure Functions Core Tools to start up
+![Azure Functions Core Tools](Docs/Azure_Functions_Core_Tools.png)
+
+* Using Postman or equivalent to make a Get-call to http://localhost:7013/api/TripBookingSaga_HttpStart 
+
+

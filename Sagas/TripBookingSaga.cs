@@ -91,6 +91,7 @@ namespace TripBookingSaga.Sagas
                     // What to do here??? Probably we have to manage this manually. Should we send an email perhaps???
                     // In which Status should we set this orchestrations instance?
                     // Rethrowing the exception or set the this orchestrations status to Complete?
+                    // Maybe set a custom Status using the context.SetCustomStatus call? 
                     // 
                     // This questions you have to answer based on your specific use case and organization.
                 }
