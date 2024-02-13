@@ -1,0 +1,13 @@
+﻿title TripBookingSaga - Orchestration 
+
+TripBookingSaga->BookHotel : CallActivityAsync
+BookHotel->TripBookingSaga : Activity Response
+TripBookingSaga->TripBookingSaga : Add compensations activity 
+
+TripBookingSaga->BookCar : CallActivityAsync
+BookCar->TripBookingSaga : Activity Response
+TripBookingSaga->TripBookingSaga : Add compensations activity
+
+TripBookingSaga->BookFlight : CallActivityAsync
+BookFlight->TripBookingSaga : Activity Response
+TripBookingSaga->TripBookingSaga : Add compensations activity
