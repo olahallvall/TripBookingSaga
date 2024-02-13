@@ -2,12 +2,12 @@
 
 TripBookingSaga->BookHotel : CallActivityAsync
 BookHotel->TripBookingSaga : Activity Response
-TripBookingSaga->TripBookingSaga : Add compensations activity 
+TripBookingSaga->TripBookingSaga : Add compensation activity 
 
 TripBookingSaga->BookCar : CallActivityAsync
 BookCar->TripBookingSaga : Activity Response
-TripBookingSaga->TripBookingSaga : Add compensations activity
+TripBookingSaga->TripBookingSaga : Add compensation activity
 
 TripBookingSaga->BookFlight : CallActivityAsync
 BookFlight->TripBookingSaga : Activity Response
-TripBookingSaga->TripBookingSaga : Add compensations activity
+TripBookingSaga->TripBookingSaga : Add compensation activity
