@@ -1,13 +1,21 @@
 ﻿title TripBookingSaga - Orchestration 
 
-TripBookingSaga->BookHotel : CallActivityAsync
-BookHotel->TripBookingSaga : Activity Response
-TripBookingSaga->TripBookingSaga : Add compensation activity 
+TripBookingSaga->+Hotel service : BookHotel
+Hotel service-->-TripBookingSaga : Activity Response
 
-TripBookingSaga->BookCar : CallActivityAsync
-BookCar->TripBookingSaga : Activity Response
-TripBookingSaga->TripBookingSaga : Add compensation activity
+TripBookingSaga->+Car service : BookCar
+Car service-->-TripBookingSaga : Activity Response
 
-TripBookingSaga->BookFlight : CallActivityAsync
-BookFlight->TripBookingSaga : Activity Response
-TripBookingSaga->TripBookingSaga : Add compensation activity
+TripBookingSaga->+Flight service : BookFlight
+Flight service-->-TripBookingSaga : Activity Response
+
+opt If exception, call compensating activities  
+    TripBookingSaga->+Hotel service : CancelHotel
+    Hotel service-->-TripBookingSaga : Activity Response
+    
+    TripBookingSaga->+Car service : CancelCar
+    Car service-->-TripBookingSaga : Activity Response
+    
+    TripBookingSaga->+Flight service : CancelFlight
+    Flight service-->-TripBookingSaga : Activity Response
+end
