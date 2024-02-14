@@ -24,6 +24,4 @@ The class TripBookingSaga acts as a process manager and orchestrates the microse
 * Wait for Azure Functions Core Tools to start up
 ![Azure Functions Core Tools](Docs/Azure_Functions_Core_Tools.png)
 
-* Using Postman or equivalent to make a Get-call to http://localhost:7013/api/TripBookingSaga_HttpStart 
-
-
+* Use Postman or equivalent to make a Get-call to http://localhost:7013/api/TripBookingSaga_HttpStart
