@@ -2,8 +2,13 @@
   "profiles": {
     "TripBookingSaga": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7013",
-      "launchBrowser": false
+      "commandLineArgs": "--port 7013"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 33244,
+      "useSSL": false
     }
   }
 }
